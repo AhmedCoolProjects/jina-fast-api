@@ -53,13 +53,14 @@
         class="flex w-full md:w-1/2 py-4 space-y-8 justify-center relative flex-col items-center mt-6"
       >
         <h1 class="text-5xl font-semibold">Surface Calculator</h1>
-        <div class="w-full">
+        <form action="/fct/surface" method="POST" class="w-full">
           <label class="label">
             <span class="label-text">Entrer la liste des x</span>
           </label>
           <input
             type="text"
-            placeholder="1251,154.25,1548,184.125"
+            name="liste_des_x"
+            placeholder="exp: 1251,154.25,1548,184.125"
             class="input input-bordered w-full"
           />
           <label class="label">
@@ -67,10 +68,18 @@
           </label>
           <input
             type="text"
-            placeholder="1251,154.25,1548,184.125"
+            name="liste_des_y"
+            placeholder="exp: 1251,154.25,1548,184.125"
             class="input input-bordered w-full"
           />
-        </div>
+          <button type="submit" class="btn btn-primary w-full mt-12">
+            Calculer
+          </button>
+        </form>
+        {% if surface %}
+        <h1 class="text-5xl font-semibold">Surface</h1>
+        <p class="text-xl text-white">{{ surface }}</p>
+        {% endif %}
       </div>
     </main>
   </body>
