@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Surface Calculator | Jina Fast API</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', path='/images/favicon.png' ) }}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 shadow-xl sticky top-0">
+        <div class="flex-1">
+          <a href="/" class="btn btn-ghost normal-case text-xl">
+            <img
+              class="w-8 h-8 mr-4"
+              src="{{ url_for('static', path='/images/favicon.png' ) }}"
+            />
+            Jina Fast API</a
+          >
+        </div>
+        <div class="flex-none gap-2">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <a
+                href="https://ahmedbargady.me"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div class="w-10 rounded-full">
+                  <img src="{{ url_for('static', path='/images/me.png' ) }}" />
+                </div>
+              </a>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="px-4 md:px-24 items-center justify-center w-full flex flex-col"
+    >
+      <div
+        class="flex w-full md:w-1/2 py-4 space-y-8 justify-center relative flex-col items-center mt-6"
+      >
+        <h1 class="text-5xl font-semibold">Surface Calculator</h1>
+        <div class="w-full">
+          <label class="label">
+            <span class="label-text">Entrer la liste des x</span>
+          </label>
+          <input
+            type="text"
+            placeholder="1251,154.25,1548,184.125"
+            class="input input-bordered w-full"
+          />
+          <label class="label">
+            <span class="label-text">Entrer la liste des y</span>
+          </label>
+          <input
+            type="text"
+            placeholder="1251,154.25,1548,184.125"
+            class="input input-bordered w-full"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
