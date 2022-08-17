@@ -1,8 +1,6 @@
-# Jina Fast API
+# Jina ML API
 
 ## Preview
-
-
 
 ## Check it
 
